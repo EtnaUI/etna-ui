@@ -1,0 +1,59 @@
+.Text {
+  color: var(--color-foreground-primary);
+
+  &--h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &--h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  &--h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &--headline {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &--subheadline {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &--body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &--body-large {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &--caption {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &--light {
+    font-weight: var(--font-weight-light);
+  }
+
+  &--regular {
+    font-weight: var(--font-weight-regular);
+  }
+
+  &--medium {
+    font-weight: var(--font-weight-medium);
+  }
+
+  &--bold {
+    font-weight: var(--font-weight-bold);
+  }
+}
