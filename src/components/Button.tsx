@@ -1,14 +1,17 @@
-import "./Button.css";
+import { ButtonHTMLAttributes } from "react";
 
-interface ButtonProps {
-  text: string;
-  onClick: () => void;
+import "./Button.scss";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary";
+  size?: "small" | "medium" | "large";
 }
 
-export const Button = ({ text, onClick }: ButtonProps) => {
-  return (
-    <button className="Button" onClick={onClick}>
-      {text}
-    </button>
-  );
-};
+export const Button = ({
+  className,
+  size = "medium",
+  variant = "primary",
+  ...props
+}: ButtonProps) => (
+  <button className={`button button--${variant} button--${size}`} {...props} />
+);
