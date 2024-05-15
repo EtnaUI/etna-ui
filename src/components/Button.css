@@ -1,0 +1,30 @@
+.Button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.Button:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+  color: #222;
+}
+
+.Button:active {
+  background-color: #ccc;
+  border-color: #aaa;
+  color: #111;
+}
