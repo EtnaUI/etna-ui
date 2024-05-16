@@ -8,7 +8,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = ({
-  className,
   size = "medium",
   variant = "primary",
   ...props
