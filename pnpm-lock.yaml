@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/ubuntu':
+        specifier: ^5.0.13
+        version: 5.0.13
       react:
         specifier: ^18.3.0
         version: 18.3.1
@@ -426,6 +429,9 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fontsource/ubuntu@5.0.13':
+    resolution: {integrity: sha512-uCnfknLk6ERUUgGPHqvtLGkHkW/0oyxEJy6CZLaHbh6d1om1jvqcnc5nSPel1UCX5frLxRSTkRKU/vAbL9QtJw==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -2940,6 +2946,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@fontsource/ubuntu@5.0.13': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
