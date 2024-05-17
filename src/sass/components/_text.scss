@@ -1,0 +1,35 @@
+.Text {
+  color: inherit;
+
+  &--h1 {
+    @include heading-1;
+  }
+
+  &--h2 {
+    @include heading-2;
+  }
+
+  &--h3 {
+    @include heading-3;
+  }
+
+  &--headline {
+    @include headline;
+  }
+
+  &--subheadline {
+    @include subheadline;
+  }
+
+  &--body-large {
+    @include body-large;
+  }
+
+  &--body {
+    @include body;
+  }
+
+  &--caption {
+    @include caption;
+  }
+}

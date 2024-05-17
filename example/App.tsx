@@ -1,4 +1,5 @@
 import { Button } from "../src";
+import { Text } from "../src/components/Text/Text";
 
 const App = () => {
   return (
@@ -24,6 +25,23 @@ const App = () => {
       <Button size="large">Large</Button>
       <Button variant="link">Link</Button>
       <Button disabled>Disabled</Button>
+      <h1>Text</h1>
+      <Text variant="h1">The quick brown fox jumps over the lazy dog.</Text>
+      <Text variant="h2">The quick brown fox jumps over the lazy dog.</Text>
+      <Text variant="h3">The quick brown fox jumps over the lazy dog.</Text>
+      <Text variant="headline">
+        The quick brown fox jumps over the lazy dog.
+      </Text>
+      <Text variant="subheadline">
+        The quick brown fox jumps over the lazy dog.
+      </Text>
+      <Text variant="body-large">
+        The quick brown fox jumps over the lazy dog.
+      </Text>
+      <Text variant="body">The quick brown fox jumps over the lazy dog.</Text>
+      <Text variant="caption">
+        The quick brown fox jumps over the lazy dog.
+      </Text>
     </div>
   );
 };
