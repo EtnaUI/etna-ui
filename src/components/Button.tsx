@@ -1,9 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 
-import "./Button.scss";
-
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "link";
   size?: "small" | "medium" | "large";
 }
 

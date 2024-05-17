@@ -22,6 +22,8 @@ const App = () => {
       <Button size="small">Small</Button>
       <Button size="medium">Small</Button>
       <Button size="large">Large</Button>
+      <Button variant="link">Link</Button>
+      <Button disabled>Disabled</Button>
     </div>
   );
 };
