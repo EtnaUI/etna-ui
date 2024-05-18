@@ -1,35 +1,54 @@
 .Text {
-  color: inherit;
+  font-family: var(--font-family);
 
-  &--h1 {
-    @include heading-1;
+  &--heading-1 {
+    font-size: 32px;
+    line-height: 40px;
   }
 
-  &--h2 {
-    @include heading-2;
+  &--heading-2 {
+    font-size: 28px;
+    line-height: 36px;
   }
 
-  &--h3 {
-    @include heading-3;
+  &--heading-3 {
+    font-size: 24px;
+    line-height: 32px;
   }
 
   &--headline {
-    @include headline;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   &--subheadline {
-    @include subheadline;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   &--body-large {
-    @include body-large;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   &--body {
-    @include body;
+    font-size: 14px;
+    line-height: 20px;
   }
 
-  &--caption {
-    @include caption;
+  &--light {
+    font-weight: var(--font-weight-light);
+  }
+
+  &--regular {
+    font-weight: var(--font-weight-regular);
+  }
+
+  &--medium {
+    font-weight: var(--font-weight-medium);
+  }
+
+  &--bold {
+    font-weight: var(--font-weight-bold);
   }
 }
