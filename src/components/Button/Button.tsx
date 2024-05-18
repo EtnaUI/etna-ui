@@ -1,5 +1,4 @@
 import { ButtonHTMLAttributes } from "react";
-import { Text } from "../Text";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "link";
@@ -13,6 +12,6 @@ export const Button = ({
   ...props
 }: ButtonProps) => (
   <button className={`button button--${variant} button--${size}`} {...props}>
-    <Text variant="caption">{children}</Text>
+    {children}
   </button>
 );

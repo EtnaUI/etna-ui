@@ -8,6 +8,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
+    "plugin:storybook/recommended"
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "react", "jsx-a11y", "react-hooks"],
