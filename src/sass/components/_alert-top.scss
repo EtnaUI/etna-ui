@@ -1,0 +1,50 @@
+$alert-types: (
+  "critical": (
+    "background": var(--color-background-danger-secondary),
+  ),
+  "danger": (
+    "background": var(--color-background-danger-primary),
+  ),
+  "warning": (
+    "background": var(--color-background-warning-secondary),
+  ),
+  "success": (
+    "background": var(--color-background-success-secondary),
+  ),
+  "informative": (
+    "background": var(--color-background-informative-secondary),
+  ),
+  "discovery": (
+    "background": var(--color-background-brand-secondary),
+  ),
+);
+
+.AlertTop {
+  padding: var(--spacing-l);
+  border-radius: var(--border-radius-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @each $type, $colors in $alert-types {
+    &--#{$type} {
+      color: var(--color-foreground-tertiary);
+      background-color: map-get($colors, "background");
+    }
+  }
+
+  &__icon {
+    font-size: 16px;
+    margin-right: var(--spacing-s);
+  }
+
+  // Right vertically centered icon
+  &__close {
+    position: absolute;
+    right: var(--spacing-s);
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}

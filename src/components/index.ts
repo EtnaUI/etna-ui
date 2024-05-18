@@ -6,3 +6,6 @@ export type { TextProps } from "./Text";
 
 export { Alert } from "./Alert";
 export type { AlertProps } from "./Alert";
+
+export { AlertTop } from "./AlertTop";
+export type { AlertTopProps } from "./AlertTop";
