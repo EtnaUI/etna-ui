@@ -54,7 +54,7 @@ export const Badge = ({
     };
 
     return (
-      <div className={badge({ size, type })}>
+      <div className={badge({ size, type })} data-testid="badge">
         <Icon
           size={size === "small" ? "small" : "regular"}
           name={iconMap[type]}

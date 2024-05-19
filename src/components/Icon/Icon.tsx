@@ -15,7 +15,11 @@ export interface IconProps {
 
 export const Icon = ({ name, size = "regular" }: IconProps) => {
   return (
-    <svg viewBox="0 0 16 16" className={`Icon Icon--${size}`}>
+    <svg
+      viewBox="0 0 16 16"
+      className={`Icon Icon--${size}`}
+      data-testid={`icon-${name}`}
+    >
       {icons[name].paths.map((path, index) => (
         <path key={index} d={path} />
       ))}
