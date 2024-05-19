@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Alert, Text } from "../../components";
+import { Alert } from "../../components";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -26,10 +26,10 @@ export const Design = () => {
   return (
     <div style={{ display: "grid", gap: "1rem" }}>
       <Alert title="Solid" design="solid">
-        <Text>This is a solid alert.</Text>
+        This is a solid alert.
       </Alert>
       <Alert title="Outline" design="outline">
-        <Text>This is an outline alert.</Text>
+        This is an outline alert.
       </Alert>
     </div>
   );
@@ -42,22 +42,22 @@ export const Type = () => {
   return (
     <div style={{ display: "grid", gap: "1rem" }}>
       <Alert title="Critical" type="critical">
-        <Text>This is a critical alert.</Text>
+        This is a critical alert.
       </Alert>
       <Alert title="Danger" type="danger">
-        <Text>This is a danger alert.</Text>
+        This is a danger alert.
       </Alert>
       <Alert title="Warning" type="warning">
-        <Text>This is a warning alert.</Text>
+        This is a warning alert.
       </Alert>
       <Alert title="Success" type="success">
-        <Text>This is a success alert.</Text>
+        This is a success alert.
       </Alert>
       <Alert title="Informative" type="informative">
-        <Text>This is an informative alert.</Text>
+        This is an informative alert.
       </Alert>
       <Alert title="Discovery" type="discovery">
-        <Text>This is a discovery alert.</Text>
+        This is a discovery alert.
       </Alert>
     </div>
   );

@@ -3,6 +3,10 @@ import { ButtonHTMLAttributes } from "react";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "link";
   size?: "small" | "medium" | "large";
+  /**
+   * Disables the button.
+   */
+  disabled?: boolean;
 }
 
 export const Button = ({

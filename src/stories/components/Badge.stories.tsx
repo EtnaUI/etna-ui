@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badge, Text } from "../../components";
+import { Badge } from "../../components";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -49,8 +49,8 @@ export const Size = () => {
 
 export const WithinText = () => {
   return (
-    <Text>
+    <p>
       This is a paragraph with a <Badge>badge</Badge> in it.
-    </Text>
+    </p>
   );
 };

@@ -32,6 +32,7 @@ $alert-types: (
 );
 
 .Alert {
+  font-family: var(--font-family);
   padding: var(--spacing-l);
   border-radius: var(--border-radius-s);
   display: flex;
@@ -50,13 +51,23 @@ $alert-types: (
   }
 
   &__title {
-    line-height: 1;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: var(--font-weight-regular);
     margin-bottom: var(--spacing-xs);
   }
 
   &__icon {
     font-size: 16px;
     margin-right: var(--spacing-s);
+    margin-top: 2px;
   }
 
   // Top right corner

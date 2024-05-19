@@ -1,5 +1,4 @@
 import { cva, VariantProps } from "class-variance-authority";
-import { Text } from "../Text";
 import { Info, Close } from "@mui/icons-material";
 import React from "react";
 
@@ -36,9 +35,7 @@ export const AlertTop = ({ children, type = "informative" }: AlertTopProps) => {
   return (
     <div className={alertTop({ type })}>
       <Info fontSize="inherit" className="Alert__icon" />
-      <div className="AlertTop__content">
-        {typeof children === "string" ? <Text>{children}</Text> : children}
-      </div>
+      <div className="AlertTop__content">{children}</div>
       <Close fontSize="inherit" className="AlertTop__close" />
     </div>
   );

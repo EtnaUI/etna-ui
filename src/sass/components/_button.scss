@@ -1,5 +1,4 @@
 .button {
-  font-family: inherit;
   padding: var(--spacing-xs) var(--spacing-s);
   border-radius: var(--border-radius-s);
 
@@ -36,14 +35,20 @@
   }
 
   &--small {
-    padding: var(--spacing-2xs) var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-s);
+    font-size: 12px;
+    line-height: 18px;
   }
 
   &--medium {
-    padding: var(--spacing-xs) var(--spacing-s);
+    padding: var(--spacing-s) var(--spacing-m);
+    font-size: 14px;
+    line-height: 20px;
   }
 
   &--large {
-    padding: var(--spacing-s) var(--spacing-m);
+    padding: var(--spacing-m) var(--spacing-l);
+    font-size: 16px;
+    line-height: 22px;
   }
 }
