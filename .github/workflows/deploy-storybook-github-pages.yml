@@ -17,4 +17,3 @@ jobs:
       with:
         path: storybook-static
         install_command: npm install
-        build_command: pnpm build-storybook
