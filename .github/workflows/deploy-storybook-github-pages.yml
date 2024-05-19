@@ -5,7 +5,7 @@ on:
   # Event for the workflow to run on
   push:
     branches:
-      - 'storybook' # Replace with the branch you want to deploy from
+      - "storybook" # Replace with the branch you want to deploy from
 
 permissions:
   contents: read
@@ -21,15 +21,20 @@ jobs:
       # Manual Checkout
       - uses: actions/checkout@v4
 
-      # Set up Node
-      - uses: actions/setup-node@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '16.x'
+          node-version: 20
+
+      # Set up pnpm
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
         with:
-          install_command: npm ci # default: npm ci
-          build_command: npm run build-storybook # default: npm run build-storybook
+          install_command: pnpm install # default: npm ci
+          build_command: pnpm build-storybook # default: npm run build-storybook
           path: storybook-static # default: dist/storybook
           checkout: false # default: true
