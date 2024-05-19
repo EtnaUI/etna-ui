@@ -1,33 +1,36 @@
-import { render, fireEvent } from "@testing-library/react";
-
+import { render } from "@testing-library/react";
 import { Button } from "./Button";
 
-describe("Button", () => {
-  it("should render the button with the correct text", () => {
-    const { getByText } = render(<Button>Click me</Button>);
-
-    expect(getByText("Click me")).toBeInTheDocument();
+describe("Components/Button", () => {
+  it("renders the button with default props", () => {
+    const { getByText } = render(<Button>Button</Button>);
+    const buttonElement = getByText("Button");
+    expect(buttonElement).toBeVisible();
   });
 
-  it("should call the onClick function when clicked", () => {
-    const onClick = jest.fn();
-    const { getByText } = render(<Button onClick={onClick}>Click me</Button>);
+  it("renders the button with primary variant", () => {
+    const { getByText } = render(<Button variant="primary">Button</Button>);
+    const buttonElement = getByText("Button");
+    expect(buttonElement).toHaveClass("button--primary");
+  });
 
-    fireEvent.click(getByText("Click me"));
-
+  it("should call onClick when button is clicked", () => {
+    const onClick = vi.fn();
+    const { getByText } = render(<Button onClick={onClick}>Button</Button>);
+    const buttonElement = getByText("Button");
+    buttonElement.click();
     expect(onClick).toHaveBeenCalled();
   });
 
-  it("should not call the onClick function when disabled", () => {
-    const onClick = jest.fn();
+  it("should not call onClick when button is disabled", () => {
+    const onClick = vi.fn();
     const { getByText } = render(
       <Button onClick={onClick} disabled>
-        Click me
+        Button
       </Button>,
     );
-
-    fireEvent.click(getByText("Click me"));
-
+    const buttonElement = getByText("Button");
+    buttonElement.click();
     expect(onClick).not.toHaveBeenCalled();
   });
 });

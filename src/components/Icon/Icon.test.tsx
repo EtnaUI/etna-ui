@@ -6,9 +6,9 @@ describe("Icon", () => {
     name: "info",
   };
 
-  it("renders the icon with test id", () => {
+  test("renders the icon with default props", () => {
     const { getByTestId } = render(<Icon {...defaultProps} />);
     const iconElement = getByTestId("icon-info");
-    expect(iconElement).toBeInTheDocument();
+    expect(iconElement).toBeVisible();
   });
 });
