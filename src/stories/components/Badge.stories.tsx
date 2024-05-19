@@ -10,6 +10,11 @@ const meta = {
   args: {
     children: "Badge",
   },
+  argTypes: {
+    children: {
+      type: "string",
+    },
+  },
 } satisfies Meta<typeof Badge>;
 
 export default meta;
@@ -41,7 +46,7 @@ export const Size = () => {
   return (
     <div style={{ gap: "1rem", display: "flex", alignItems: "center" }}>
       <Badge size="small">Small</Badge>
-      <Badge size="medium">Medium</Badge>
+      <Badge size="regular">Medium</Badge>
       <Badge size="large">Large</Badge>
     </div>
   );

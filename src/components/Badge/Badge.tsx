@@ -1,17 +1,11 @@
 import { cva, VariantProps } from "class-variance-authority";
-import {
-  Info,
-  Lightbulb,
-  Error,
-  Warning,
-  CheckCircle,
-} from "@mui/icons-material";
+import { Icon, IconName } from "../Icon/Icon";
 
 const badge = cva("Badge", {
   variants: {
     size: {
       small: "Badge--small",
-      medium: "Badge--medium",
+      regular: "Badge--regular",
       large: "Badge--large",
     },
     type: {
@@ -26,6 +20,8 @@ const badge = cva("Badge", {
 });
 
 export type BadgeVariants = VariantProps<typeof badge>;
+export type BadgeSize = NonNullable<BadgeVariants["size"]>;
+export type BadgeType = NonNullable<BadgeVariants["type"]>;
 
 export interface BadgeProps {
   /**
@@ -35,31 +31,36 @@ export interface BadgeProps {
   /**
    * The size of the badge.
    */
-  size?: NonNullable<BadgeVariants["size"]>;
+  size?: BadgeSize;
   /**
    * The type of the badge.
    */
-  type?: NonNullable<BadgeVariants["type"]>;
+  type?: BadgeType;
 }
 
 export const Badge = ({
   children,
-  size = "medium",
+  size = "regular",
   type = "neutral",
 }: BadgeProps) => {
-  const iconMap = {
-    neutral: <Info fontSize="inherit" />,
-    discovery: <Lightbulb fontSize="inherit" />,
-    danger: <Error fontSize="inherit" />,
-    warning: <Warning fontSize="inherit" />,
-    success: <CheckCircle fontSize="inherit" />,
-    informative: <Info fontSize="inherit" />,
-  };
+  {
+    const iconMap: Record<BadgeType, IconName> = {
+      informative: "info",
+      danger: "error",
+      discovery: "lightbulb",
+      neutral: "info",
+      success: "check-circle",
+      warning: "warning",
+    };
 
-  return (
-    <div className={badge({ size, type })}>
-      {iconMap[type]}
-      {typeof children === "string" ? <span>{children}</span> : children}
-    </div>
-  );
+    return (
+      <div className={badge({ size, type })}>
+        <Icon
+          size={size === "small" ? "small" : "regular"}
+          name={iconMap[type]}
+        />
+        {children}
+      </div>
+    );
+  }
 };

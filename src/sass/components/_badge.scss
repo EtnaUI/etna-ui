@@ -3,6 +3,7 @@
   align-items: center;
   font-family: var(--font-family);
   gap: var(--spacing-xs);
+  vertical-align: middle;
 
   padding: var(--spacing-xs) var(--spacing-s);
   border-radius: var(--border-radius-s);
@@ -43,9 +44,9 @@
     line-height: 18px;
   }
 
-  &--medium {
+  &--regular {
     padding: 0 var(--spacing-xs);
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
 
