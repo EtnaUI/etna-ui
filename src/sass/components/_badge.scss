@@ -1,0 +1,57 @@
+.Badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family);
+  gap: var(--spacing-xs);
+
+  padding: var(--spacing-xs) var(--spacing-s);
+  border-radius: var(--border-radius-s);
+
+  &--neutral {
+    background-color: var(--color-background-tertiary);
+    color: var(--color-foreground-primary);
+  }
+
+  &--discovery {
+    background-color: var(--color-background-brand-tertiary);
+    color: var(--color-foreground-brand-primary);
+  }
+
+  &--success {
+    background-color: var(--color-background-success-tertiary);
+    color: var(--color-foreground-success-primary);
+  }
+
+  &--warning {
+    background-color: var(--color-background-warning-tertiary);
+    color: var(--color-foreground-warning-primary);
+  }
+
+  &--danger {
+    background-color: var(--color-background-danger-tertiary);
+    color: var(--color-foreground-danger-primary);
+  }
+
+  &--informative {
+    background-color: var(--color-background-informative-tertiary);
+    color: var(--color-foreground-informative-primary);
+  }
+
+  &--small {
+    padding: 0 var(--spacing-xs);
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &--medium {
+    padding: 0 var(--spacing-xs);
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--large {
+    padding: var(--spacing-xs) var(--spacing-s);
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
