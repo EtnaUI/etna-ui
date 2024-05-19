@@ -1,6 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority";
-import { Info, Close } from "@mui/icons-material";
 import React from "react";
+import { Icon } from "../Icon";
 
 const alertTop = cva("AlertTop", {
   variants: {
@@ -34,9 +34,9 @@ export interface AlertTopProps {
 export const AlertTop = ({ children, type = "informative" }: AlertTopProps) => {
   return (
     <div className={alertTop({ type })}>
-      <Info fontSize="inherit" className="Alert__icon" />
+      <Icon name="info" className="AlertTop__icon" />
       <div className="AlertTop__content">{children}</div>
-      <Close fontSize="inherit" className="AlertTop__close" />
+      <Icon name="close" className="AlertTop__close" />
     </div>
   );
 };

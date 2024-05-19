@@ -11,13 +11,17 @@ export interface IconProps {
    * The size of the icon.
    */
   size?: "small" | "regular" | "large";
+  /**
+   * Additional class names.
+   */
+  className?: string;
 }
 
-export const Icon = ({ name, size = "regular" }: IconProps) => {
+export const Icon = ({ className, name, size = "regular" }: IconProps) => {
   return (
     <svg
       viewBox="0 0 16 16"
-      className={`Icon Icon--${size}`}
+      className={`Icon Icon--${size} ${className}`}
       data-testid={`icon-${name}`}
     >
       {icons[name].paths.map((path, index) => (
