@@ -1,0 +1,26 @@
+import {
+  Meta,
+  Title,
+  IconGallery,
+  IconItem,
+  Subtitle,
+} from "@storybook/blocks";
+import { Icon } from "../components";
+import icons from "../components/Icon/icons.json";
+
+<Meta title="Style Guide/Iconography" />
+
+# Iconography
+
+<Subtitle>
+  Icons are used to visually communicate core parts of the product and available
+  actions.
+</Subtitle>
+
+<IconGallery>
+  {Object.keys(icons).map((icon) => (
+    <IconItem key={icon} name={icon}>
+      <Icon name={icon} />
+    </IconItem>
+  ))}
+</IconGallery>

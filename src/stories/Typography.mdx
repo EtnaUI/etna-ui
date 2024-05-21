@@ -1,0 +1,51 @@
+import { Meta, Typeset } from "@storybook/blocks";
+
+<Meta title="Style Guide/Typography" />
+
+export const typography = {
+  type: {
+    primary: "var(--font-family-primary)",
+  },
+  weight: {
+    light: "var(--font-weight-light)",
+    regular: "var(--font-weight-regular)",
+    medium: "var(--font-weight-medium)",
+    bold: "var(--font-weight-bold)",
+  },
+  size: {
+    s1: 12,
+    s2: 14,
+    s3: 16,
+    m1: 20,
+    m2: 24,
+    m3: 28,
+    l1: 32,
+    l2: 40,
+    l3: 48,
+  },
+};
+
+export const SampleText = "Vulcans never bluff.";
+
+# Typography
+
+**Font:** Ubuntu
+
+**Weights:** 300(light), 400(regular), 500(medium), 700(bold)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+    Number(typography.size.s2),
+    Number(typography.size.s3),
+    Number(typography.size.m1),
+    Number(typography.size.m2),
+    Number(typography.size.m3),
+    Number(typography.size.l1),
+    Number(typography.size.l2),
+    Number(typography.size.l3),
+  ]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={"var(--font-family-primary)"}
+/>
