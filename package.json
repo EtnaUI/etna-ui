@@ -3,10 +3,24 @@
   "author": "Matteo Cavallo",
   "description": "EtnaUI is a comprehensive design system, made with love in Italy.",
   "type": "module",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "dist/etna-ui.umd.js",
+  "module": "dist/etna-ui.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/etna-ui.es.js",
+      "require": "./dist/etna-ui.umd.js"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
+    "build": "pnpm build:style && pnpm build:types && vite build",
+    "build:style": "sass src/sass/main.scss dist/etna-ui.css",
+    "build:types": "tsc",
     "lint": "eslint .",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",

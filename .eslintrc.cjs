@@ -20,5 +20,5 @@ module.exports = {
       version: "detect",
     },
   },
-  ignorePatterns: ["storybook-static/*"],
+  ignorePatterns: ["storybook-static", "dist"],
 };
