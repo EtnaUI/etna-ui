@@ -1,7 +1,6 @@
 .Badge {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font-family);
   gap: var(--spacing-xs);
   vertical-align: middle;
 
@@ -39,20 +38,17 @@
   }
 
   &--small {
+    @include typography($typography-caption);
     padding: 0 var(--spacing-xs);
-    font-size: 12px;
-    line-height: 18px;
   }
 
   &--regular {
+    @include typography($typography-body);
     padding: 0 var(--spacing-xs);
-    font-size: 14px;
-    line-height: 20px;
   }
 
   &--large {
+    @include typography($typography-body-large);
     padding: var(--spacing-xs) var(--spacing-s);
-    font-size: 16px;
-    line-height: 22px;
   }
 }

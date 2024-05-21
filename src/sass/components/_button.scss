@@ -35,20 +35,17 @@
   }
 
   &--small {
+    @include typography($typography-caption);
     padding: var(--spacing-xs) var(--spacing-s);
-    font-size: 12px;
-    line-height: 18px;
   }
 
   &--medium {
+    @include typography($typography-body);
     padding: var(--spacing-s) var(--spacing-m);
-    font-size: 14px;
-    line-height: 20px;
   }
 
   &--large {
+    @include typography($typography-body-large);
     padding: var(--spacing-m) var(--spacing-l);
-    font-size: 16px;
-    line-height: 22px;
   }
 }

@@ -7,12 +7,31 @@
   --font-weight-bold: 700;
 }
 
+@mixin font-light {
+  font-weight: var(--font-weight-light);
+}
+
+@mixin font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+@mixin font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+@mixin font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+@mixin font-italic {
+  font-style: italic;
+}
+
 body,
 button {
   font-family: var(--font-family-primary);
 }
 
 p {
-  font-size: 14px;
-  line-height: 20px;
+  @include typography($typography-body);
 }

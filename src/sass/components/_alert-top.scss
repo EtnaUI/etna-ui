@@ -27,9 +27,7 @@ $alert-types: (
   justify-content: center;
   position: relative;
 
-  font-family: var(--font-family);
-  font-size: 14px;
-  line-height: 20px;
+  @include typography($typography-body);
 
   @each $type, $colors in $alert-types {
     &--#{$type} {

@@ -32,7 +32,7 @@ $alert-types: (
 );
 
 .Alert {
-  font-family: var(--font-family);
+  @include typography($typography-body);
   padding: var(--spacing-l);
   border-radius: var(--border-radius-s);
   display: flex;
@@ -51,17 +51,12 @@ $alert-types: (
   }
 
   &__title {
-    font-size: 14px;
-    line-height: 20px;
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-xs);
   }
 
   &__content {
-    font-size: 14px;
-    line-height: 20px;
     font-weight: var(--font-weight-regular);
-    margin-bottom: var(--spacing-xs);
   }
 
   &__icon {
